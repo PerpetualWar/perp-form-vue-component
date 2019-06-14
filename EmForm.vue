@@ -77,7 +77,7 @@ export default {
     return schema;
   },
   created() {
-    this.validationProps.forEach(valObj => {
+    this.validationProps.forEach(valObj => {    
       //set must be used since we are dynamically adding properties
       this.$set(this.form, valObj.name, valObj.initValue);
     });
@@ -104,15 +104,14 @@ export default {
     ipAddress,
     between,
     url,
-    sentChange() {
-      this.sent = true;
+    sentChange(bool) {
+      this.sent = bool;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../../assets/sass/variables.scss";
 .submit {
   display: flex;
   justify-content: space-around;
@@ -123,7 +122,7 @@ export default {
   }
 }
 .error-message {
-  color: $color-red;
+  color: red;
   font-size: 13px;
   padding-top: 3px;
 }
