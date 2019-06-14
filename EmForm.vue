@@ -25,8 +25,6 @@ import {
   url,
   helpers,
 } from 'vuelidate/lib/validators';
-import EmInput from '../EmInput/EmInput.vue';
-import EmButton from '../EmButton/EmButton.vue';
 
 export default {
   name: 'EmForm',
@@ -39,8 +37,7 @@ export default {
     inline: { type: Boolean, default: false },
   },
   components: {
-    EmInput,
-    EmButton,
+    //
   },
   data() {
     return {
@@ -52,7 +49,7 @@ export default {
     let schema = {
       form: {
         //
-        // nesto: {
+        // property: {
         //   required,
         //   url,
         //   minLength: minLength(3),
